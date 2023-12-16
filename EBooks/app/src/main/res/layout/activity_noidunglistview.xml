@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Noidunglistview">
+
+    <TextView
+        android:id="@+id/TenTruyen"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:text="Tên truyện"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/NoiDung"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:layout_margin="20dp"
+        android:scrollbars="vertical"
+        android:text="nội dung"
+        android:textSize="25sp"></TextView>
+
+    <Button
+        android:id="@+id/bthemyt"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:text="thêm vào mục yêu thích " />
+</LinearLayout>

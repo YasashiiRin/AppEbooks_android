@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/draw1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <!--Toolbar-->
+       <androidx.appcompat.widget.Toolbar
+           android:background="#FFFFFF"
+           app:titleTextColor="#000000"
+           android:id="@+id/tutruyen"
+           app:title="Mê truyện chữ"
+           android:layout_width="match_parent"
+           android:layout_height="50dp">
+       </androidx.appcompat.widget.Toolbar>
+      <!-- End-Toolbar-->
+
+
+       <!--Container-->
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <!--Content-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+                              <LinearLayout
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="138dp">
+
+                                  <com.denzcoskun.imageslider.ImageSlider
+                                      android:id="@+id/image_slider"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      app:iss_auto_cycle="true"
+                                      app:iss_delay="0"
+                                      app:iss_error_image="@drawable/ic_launcher_background"
+                                      app:iss_period="1000"
+                                      app:iss_placeholder="@drawable/ic_launcher_foreground" />
+                              </LinearLayout>
+               <!--End-Content-->
+
+               <!--View-Scroll-->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="68dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="5dp"
+
+                   android:orientation="horizontal">
+
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/rcvlevel1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:scrollbars="horizontal"
+
+                       ></androidx.recyclerview.widget.RecyclerView>
+               </LinearLayout>
+               <!--End-View-Scroll-->
+
+               <!--View-Book-->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="5dp">
+
+                   <LinearLayout
+                       android:layout_width="196dp"
+                       android:layout_height="130dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:id="@+id/tvinfoname"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="80dp"
+                           android:gravity="center"
+                           android:text="Tiên Nghịch" />
+
+                       <TextView
+                           android:id="@+id/tvinfonoidung"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:orientation="horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="120dp">
+                       <ImageView
+                           android:id="@+id/imvdetail"
+                           android:layout_width="100dp"
+                           android:layout_height="120dp"
+                          />
+
+                       <Button
+                           android:id="@+id/btread"
+                           android:layout_width="wrap_content"
+                           android:layout_height="40dp"
+                           android:backgroundTint="@color/black"
+                           android:text="Đọc"
+                           android:textColor="@color/white" />
+                   </LinearLayout>
+               </LinearLayout>
+               <!--End-View-Book-->
+           </LinearLayout>
+           <!--End-Content-->
+
+       </ScrollView>
+
+
+       List-Book
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:orientation="vertical">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rclist"
+               android:layout_width="match_parent"
+               android:layout_height="250dp"
+               android:scrollbars="horizontal"></androidx.recyclerview.widget.RecyclerView>
+           <!--End-ListBook-->
+       </LinearLayout>
+    <!--End-Container-->
+
+  <!--  Footer-->
+
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/imageView9"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:onClick="Mainsearch"
+               app:srcCompat="@drawable/ic_baseline_file_copy_24"
+               tools:ignore="TouchTargetSizeCheck" />
+
+           <ImageView
+               android:id="@+id/btyeuthich"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:onClick="yeuthich"
+               app:srcCompat="@drawable/ic_baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_bell" />
+
+           <ImageView
+               android:id="@+id/imageView11"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:onClick="Mainprofile"
+               app:srcCompat="@drawable/ic_user" />
+    </LinearLayout>
+        End-Footer
+       NavigationView
+
+   </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
+        android:id="@+id/navigationview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listviewinfo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        </ListView>
+        <ListView
+            android:id="@+id/listviewmain"
+            android:layout_marginTop="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
+   <!-- End-NavigationView-->
+
+
+</LinearLayout>
+</RelativeLayout>

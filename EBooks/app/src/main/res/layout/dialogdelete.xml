@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="bạn xác nhận muốn xóa truyện này ?"
+        android:textColor="#0B0B0B"
+        android:textSize="20sp"></TextView>
+   <LinearLayout
+       android:gravity="center"
+       android:layout_marginTop="20dp"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <Button
+           android:id="@+id/buttonYes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="15dp"
+           android:backgroundTint="#E91E63"
+           android:text="Yes"></Button>
+
+       <Button
+           android:id="@+id/buttonNo"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="15dp"
+           android:backgroundTint="#03A9F4"
+           android:text="No"></Button>
+   </LinearLayout>
+</LinearLayout>
