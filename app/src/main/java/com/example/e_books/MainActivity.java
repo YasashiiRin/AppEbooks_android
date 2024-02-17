@@ -300,19 +300,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void slidehoz1(View v){
-        imgdetail.setImageResource(R.drawable.ic_search);
-    }
-    public void slidehoz2(View v){
-        imgdetail.setImageResource(R.drawable.ic_search);
-    }
-    public void slidehoz3(View v){
-        imgdetail.setImageResource(R.drawable.ic_search);
-    }
-    public void slidehoz4(View v){
-        imgdetail.setImageResource(R.drawable.ic_search);
-    }
-    public void slidehoz5(View v){
-        imgdetail.setImageResource(R.drawable.ic_search);
-    }
 }

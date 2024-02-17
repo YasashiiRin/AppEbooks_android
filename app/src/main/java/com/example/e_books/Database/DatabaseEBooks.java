@@ -1317,11 +1317,11 @@ public class DatabaseEBooks extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase mydb) {
         mydb.execSQL(SQLtruyenyt);
-     mydb.execSQL(sqlacc);
-     mydb.execSQL(SQLQueryt1);
-     mydb.execSQL(SQLQuery1);
-     mydb.execSQL(SQLQuery2);
-     mydb.execSQL(SQLQuery3);
+        mydb.execSQL(sqlacc);
+        mydb.execSQL(SQLQueryt1);
+        mydb.execSQL(SQLQuery1);
+        mydb.execSQL(SQLQuery2);
+        mydb.execSQL(SQLQuery3);
         mydb.execSQL(SQLQuery4);
         mydb.execSQL(SQLQuery5);
         mydb.execSQL(SQLQuery6);

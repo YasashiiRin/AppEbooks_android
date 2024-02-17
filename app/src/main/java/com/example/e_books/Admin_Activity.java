@@ -60,18 +60,12 @@ public class Admin_Activity extends AppCompatActivity {
             }
         });
     }
-    //Dialog Delete
     private void DialogDelete(int position) {
-
-        //Tạo đối tượng cửa sổ dialog
         Dialog dialog  =  new Dialog(this);
 
-        //Nạp layout vào
+        //nạp diqlogdelete
         dialog.setContentView(R.layout.dialogdelete);
-        //Click No mới thoát, click ngoài ko thoát
         dialog.setCanceledOnTouchOutside(false);
-
-        //Ánh xạ
         Button btnYes = dialog.findViewById(R.id.buttonYes);
         Button btnNo = dialog.findViewById(R.id.buttonNo);
 
@@ -79,9 +73,7 @@ public class Admin_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int idtruyen = TruyenArrayList.get(position).getTid();
-                //Xóa trong SQL
                 databaseEBooks.Delete(idtruyen);
-                //Cập nhật lại listview
                 Intent intent = new Intent(Admin_Activity.this,Admin_Activity.class);
                 finish();
                 startActivity(intent);

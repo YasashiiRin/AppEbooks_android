@@ -82,10 +82,9 @@ public class Mainsearch extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-    private void filter(String text){
 
+    private void filter(String text){
         //xóa sau mỗi lần gọi tới filter
         arrayList.clear();
 
@@ -101,7 +100,6 @@ public class Mainsearch extends AppCompatActivity {
         }
         adapterTruyen.filterList(filteredList);
     }
-
     //Hàm  gán dữ liệu từ CSDL vào listview
     public void initList() {
         TruyenArrayList = new ArrayList<>();

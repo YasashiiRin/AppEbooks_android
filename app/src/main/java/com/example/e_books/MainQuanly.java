@@ -14,7 +14,7 @@ import com.example.e_books.Model.Truyen;
 
 public class MainQuanly extends AppCompatActivity {
     EditText edtTieuDe,edtNoiDung,edtAnh;
-    Button btnDangBai;
+    Button btnThem;
     DatabaseEBooks databaseEBooks;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +23,12 @@ public class MainQuanly extends AppCompatActivity {
 
         edtTieuDe = findViewById(R.id.dbtieude);
         edtNoiDung = findViewById(R.id.dbnoidung);
-        btnDangBai = findViewById(R.id.dbdangbai);
+        btnThem = findViewById(R.id.dbdangbai);
         edtAnh = findViewById(R.id.dbimg);
 
         databaseEBooks= new DatabaseEBooks(this);
 
-        btnDangBai.setOnClickListener(new View.OnClickListener() {
+        btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String tentruyen = edtTieuDe.getText().toString();

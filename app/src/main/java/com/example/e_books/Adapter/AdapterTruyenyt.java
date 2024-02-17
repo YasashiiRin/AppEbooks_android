@@ -52,10 +52,7 @@ public class AdapterTruyenyt extends BaseAdapter
         viewholder.txttentruyen=view.findViewById(R.id.tvnametruyenyt);
         viewholder.imgtruyen=view.findViewById(R.id.imgtruyenyt);
         view.setTag(viewholder);
-
         TruyenYT truyenYT =(TruyenYT) getItem(i);
-
-
         viewholder.txttentruyen.setText(truyenYT.getYtentruyen());
         Picasso.get().load(truyenYT.getYimg()).placeholder(R.drawable.ic_loat).error(R.drawable.ic_img).into(viewholder.imgtruyen);
         return view;

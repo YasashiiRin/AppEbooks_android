@@ -69,24 +69,20 @@ public class MainTim extends AppCompatActivity {
 
     }
     private void filter(String text){
-
-        //xóa sau mỗi lần gọi tới filter
         arrayList.clear();
-
         ArrayList<Truyen> filteredList = new ArrayList<>();
 
         for(Truyen item : TruyenArrayList){
             if (item.getTtentruyen().toLowerCase().contains(text.toLowerCase())){
                 filteredList.add(item);
 
-                //Thêm dữ liệu để hiển thị ra item nội dung
+                //thêm dữ liệu vào list để hiển thị
                 arrayList.add(item);
             }
         }
         adapterTruyen.filterList(filteredList);
     }
 
-    //Hàm  gán dữ liệu từ CSDL vào listview
     public void initList(){
         TruyenArrayList = new ArrayList<>();
         //
@@ -103,12 +99,9 @@ public class MainTim extends AppCompatActivity {
             int id_tk = cursor1.getInt(4);
 
             TruyenArrayList.add(new Truyen(id,tentruyen,noidung,anh,id_tk));
-
-            //Thêm dữ liệu vào mảng
             arrayList.add(new Truyen(id,tentruyen,noidung,anh,id_tk));
 
             adapterTruyen= new adapterTruyen(getApplicationContext(),TruyenArrayList);
-            //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,TruyenArrayList);
             listView.setAdapter(adapterTruyen);
         }
         cursor1.moveToFirst();

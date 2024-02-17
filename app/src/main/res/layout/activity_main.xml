@@ -175,7 +175,7 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:onClick="yeuthich"
-               app:srcCompat="@drawable/ic_baseline_home_24" />
+               app:srcCompat="@drawable/ic_heart" />
 
         <ImageView
             android:id="@+id/imageView8"
